@@ -24,7 +24,7 @@ func BlogAll(w http.ResponseWriter, r *http.Request) {
 	}
 
 	for rows.Next() {
-		if err := rows.Scan(&blog.Id, &blog.Title, &blog.Text); err != nil {
+		if err := rows.Scan(&blog.ID, &blog.Title, &blog.Text); err != nil {
 			log.Fatal(err)
 		} else {
 			arrBlog = append(arrBlog, blog)
